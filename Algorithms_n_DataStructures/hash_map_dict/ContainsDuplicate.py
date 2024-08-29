@@ -3,23 +3,20 @@ from typing import List
 
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        n = len(nums)
-        hash_map = {}
         if k == 0:
             return False
+
+        n = len(nums)
         if k >= n:
             return n != len(set(nums))
 
-        l = 0
-        for i in range(n):
-            if nums[i] in hash_map:
-                distance = i - hash_map[nums[i]]
-                if distance <= k:
-                    return True
-                else:
-                    hash_map[nums[i]] = i
-            else:
-                hash_map[nums[i]] = i
+        hash_map = {}
+        for index, value in enumerate(nums):
+
+            if value in hash_map and index - hash_map[value] <= k:
+                return True
+
+            hash_map[value] = index
 
         return False
 
