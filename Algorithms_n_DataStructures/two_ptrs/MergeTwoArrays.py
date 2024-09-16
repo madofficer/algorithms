@@ -3,6 +3,7 @@ n, m = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = [0] * (m + n)
+
 i, j = 0, 0
 
 while i < n or j < m:
