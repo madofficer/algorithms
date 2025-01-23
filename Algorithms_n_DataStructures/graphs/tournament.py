@@ -6,15 +6,15 @@ if N * (N - 1) / 2 == len(edges):
     for vertex1, vertex2 in edges:
 
         if (vertex1, vertex2) in edges_map:
-            print('NO')
+            print("NO")
             exit()
         else:
             edges_map.add((vertex1, vertex2))
 
         if (vertex2, vertex1) in edges:
-            print('NO')
+            print("NO")
             exit()
     else:
-        print('YES')
+        print("YES")
 else:
-    print('NO')
+    print("NO")

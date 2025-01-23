@@ -16,7 +16,8 @@ class Solution:
         for i in range(1, l):
             prefix[i] += prefix[i - 1]
 
-        transform = lambda c, i: chr((ord(c) - ord('a') + prefix[i]) % 26 + ord('a'))
+        transform = lambda c, i: chr((ord(c) - ord("a") + prefix[i]) % 26 + ord("a"))
         return "".join(transform(c, i) for i, c in enumerate(s))
+
 
 print(Solution().shiftingLetters("abc", [[0, 1, 0], [1, 2, 1], [0, 2, 1]]))

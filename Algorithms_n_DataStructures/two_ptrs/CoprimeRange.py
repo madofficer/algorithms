@@ -22,7 +22,7 @@ def findMinimumLength(a):
             if g == 1:
                 dp[i][j] = 2
             else:
-                dp[i][j] = float('inf')
+                dp[i][j] = float("inf")
                 for k in range(i, j):
                     dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j])
 

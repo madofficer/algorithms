@@ -6,7 +6,7 @@ flag = True
 for i in range(N):
 
     if adjacency_matrix[i][i]:
-        print('NO')
+        print("NO")
         exit()
 
     for j in range(i + 1, N):
@@ -14,4 +14,4 @@ for i in range(N):
         if adjacency_matrix[i][j] != adjacency_matrix[j][i]:
             flag = False
 
-print('NO' if flag else 'YES')
+print("NO" if flag else "YES")

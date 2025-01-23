@@ -6,7 +6,7 @@ a = [int(x) - 1 for x in input().split()]
 def ok(i: int, string: str) -> bool:
     string = list(string)
     for j in a[:i]:
-        string[j] = '*'
+        string[j] = "*"
     pos = 0
     for c in p:
         try:

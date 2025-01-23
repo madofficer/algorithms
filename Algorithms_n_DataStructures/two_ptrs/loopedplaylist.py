@@ -14,7 +14,7 @@ if p >= total_mood:
         p -= loops * total_mood
         flag = True
 
-res = [0, float('inf')]
+res = [0, float("inf")]
 l = 0
 mood = 0
 a = 2 * a

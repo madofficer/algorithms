@@ -13,7 +13,7 @@ class Solution:
             prefix_sum[i] = prefix_sum[i - 1] + nums[i - 1]
 
         for i in range(n + 1):
-            prefix_sum[i] = (prefix_sum[i] + k) % k # create non-negative sum
+            prefix_sum[i] = (prefix_sum[i] + k) % k  # create non-negative sum
 
             if prefix_sum[i] in d:
                 ans += d[prefix_sum[i]]

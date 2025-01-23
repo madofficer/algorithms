@@ -13,7 +13,7 @@ def getCount(T: int, t: int, z: int, y: int) -> int:
 
 
 l = 0
-r = 10 ** 18
+r = 10**18
 T = 0
 
 while l <= r:

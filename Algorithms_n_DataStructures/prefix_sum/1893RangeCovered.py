@@ -12,4 +12,5 @@ class Solution:
         else:
             return True
 
-print(Solution().isCovered([[1,2],[3,4],[5,6]], 2, 5))
+
+print(Solution().isCovered([[1, 2], [3, 4], [5, 6]], 2, 5))

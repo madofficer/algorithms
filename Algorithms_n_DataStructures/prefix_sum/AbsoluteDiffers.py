@@ -19,7 +19,12 @@ class Solution:
         print(suffix_sum)
 
         for i in range(n):
-            res[i] = nums[i] * i - prefix_sum[i + 1] + suffix_sum[i + 1] - nums[i] * (n - i - 1)
+            res[i] = (
+                nums[i] * i
+                - prefix_sum[i + 1]
+                + suffix_sum[i + 1]
+                - nums[i] * (n - i - 1)
+            )
 
         return res
 

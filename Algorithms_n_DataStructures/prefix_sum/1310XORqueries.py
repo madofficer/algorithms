@@ -20,5 +20,4 @@ class Solution:
         return res
 
 
-print(Solution().xorQueries([1, 11, 14, 10, 7]
-                            , [[0, 2], [0, 0], [2, 3], [1, 4]]))
+print(Solution().xorQueries([1, 11, 14, 10, 7], [[0, 2], [0, 0], [2, 3], [1, 4]]))

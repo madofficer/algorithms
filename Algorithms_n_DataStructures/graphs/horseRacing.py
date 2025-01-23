@@ -19,10 +19,10 @@ while True:
     v = x[1] - 1
     edges[u].append(v)
     if v == K:
-        print('No')
+        print("No")
         exit()
 
 visited = [False] * N
 
 dfs(K, visited)
-print('Yes' if all(visited) else 'No')
+print("Yes" if all(visited) else "No")

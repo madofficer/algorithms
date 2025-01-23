@@ -26,10 +26,10 @@ for i in visited:
         dfs(i)
         count += 1
         if count > 1:
-            print('NO')
+            print("NO")
             exit()
 
 if edge // 2 == N - 1:
-    print('YES')
+    print("YES")
 else:
-    print('NO')
+    print("NO")

@@ -9,7 +9,7 @@ for i in range(N):
     for j in range(N):
         # source : 1
         if adjacency_matrix[i][j] == 1 and (
-                vertices[i] == 1 or vertices[i] == 0
+            vertices[i] == 1 or vertices[i] == 0
         ):  # if source or empty
             vertices[i] = 1
 
@@ -18,7 +18,7 @@ for i in range(N):
 
         # drain : -1
         if adjacency_matrix[j][i] == 1 and (
-                vertices[i] == -1 or vertices[i] == 0
+            vertices[i] == -1 or vertices[i] == 0
         ):  # if drain or empty
             vertices[i] = -1
 

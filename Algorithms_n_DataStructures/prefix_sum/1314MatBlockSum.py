@@ -14,7 +14,12 @@ class Solution:
 
         for i in range(1, m):
             for j in range(1, n):
-                prefix_sum[i][j] = prefix_sum[i - 1][j] + prefix_sum[i][j - 1] - prefix_sum[i - 1][j - 1] + mat[i][j]
+                prefix_sum[i][j] = (
+                    prefix_sum[i - 1][j]
+                    + prefix_sum[i][j - 1]
+                    - prefix_sum[i - 1][j - 1]
+                    + mat[i][j]
+                )
 
         res = [[0] * n for _ in range(m)]
         for i in range(m):

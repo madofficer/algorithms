@@ -25,7 +25,7 @@ for i in range(N):
     if color[i] == 0:
         dfs(i, 1)
     if not flag:
-        print('NO')
+        print("NO")
         exit()
 
-print('YES')
+print("YES")

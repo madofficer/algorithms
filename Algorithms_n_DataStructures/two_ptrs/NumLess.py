@@ -7,4 +7,4 @@ i = 0
 for j in range(m):
     while i < n and a[i] < b[j]:
         i += 1
-    print(i, end=' ')
+    print(i, end=" ")

@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def shortestToChar(self, s: str, c: str) -> List[int]:
         n = len(s)
-        res = [10 ** 5] * n
+        res = [10**5] * n
         l = 0
 
         curr_index = -1

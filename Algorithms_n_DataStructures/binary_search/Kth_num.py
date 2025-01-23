@@ -17,8 +17,8 @@ def count_less(x: int, l: list) -> int:
     return counter
 
 
-l = 2 * -10 ** 9
-r = 2 * 10 ** 9
+l = 2 * -(10**9)
+r = 2 * 10**9
 ans = 0
 while l <= r:
     mid = (l + r) // 2

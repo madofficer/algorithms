@@ -8,7 +8,7 @@ class Solution:
 
             while i >= 0:
 
-                if s[i] != '#':
+                if s[i] != "#":
 
                     if backspacesS > 0:
                         i -= 1
@@ -22,7 +22,7 @@ class Solution:
 
             while j >= 0:
 
-                if t[j] != '#':
+                if t[j] != "#":
 
                     if backspacesT > 0:
                         j -= 1

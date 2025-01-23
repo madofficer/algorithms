@@ -28,4 +28,4 @@ class Solution:
         return res
 
 
-print(Solution().countCompleteSubarrays([1,3,1,2,2]))
+print(Solution().countCompleteSubarrays([1, 3, 1, 2, 2]))

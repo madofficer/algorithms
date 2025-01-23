@@ -1,6 +1,7 @@
 import sys
 import bisect
-sys.setrecursionlimit(10 ** 6)
+
+sys.setrecursionlimit(10**6)
 
 N, M = map(int, input().split())
 edges = [[] for _ in range(N)]

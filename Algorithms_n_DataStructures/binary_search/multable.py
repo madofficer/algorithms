@@ -9,8 +9,8 @@ def count_less(x: int, n: int) -> int:
     return count
 
 
-l = int(k ** 0.5)
-r = n ** 2
+l = int(k**0.5)
+r = n**2
 ans = 0
 while l <= r:
     mid = (l + r) // 2

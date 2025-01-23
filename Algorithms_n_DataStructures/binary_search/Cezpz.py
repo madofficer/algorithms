@@ -1,7 +1,7 @@
 n, x, y = map(int, input().split())
 
 l = 0
-r = 2 * 10 ** 18
+r = 2 * 10**18
 
 while l <= r:
     mid = (l + r) // 2

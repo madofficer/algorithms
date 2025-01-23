@@ -12,4 +12,4 @@ for i in range(N):
             degrees[i] += 1
             degrees[j] += 1
 
-print('YES' if len(set(degrees)) == 1 else 'NO')
+print("YES" if len(set(degrees)) == 1 else "NO")

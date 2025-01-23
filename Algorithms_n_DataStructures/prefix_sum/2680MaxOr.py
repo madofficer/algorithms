@@ -16,7 +16,7 @@ class Solution:
         res = 0
 
         for i in range(l):
-            k_num = nums[i] * (2 ** k)
+            k_num = nums[i] * (2**k)
 
             if i > 0:
                 k_num |= prefix_bitwise[i - 1]

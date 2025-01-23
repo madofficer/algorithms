@@ -19,4 +19,5 @@ class Solution:
                 nums1[i + j] = nums2[j]
                 j += 1
 
-Solution().merge([1,2,3,0,0,0], 3, [2,5,6], 3)
+
+Solution().merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)

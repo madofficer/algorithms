@@ -31,7 +31,7 @@ def pair_counter(x, n: int, a, b: list) -> int:
 
 
 l = 0
-r = 10 ** 12
+r = 10**12
 ans = 0
 for i in range(100):
     mid = (l + r) / 2

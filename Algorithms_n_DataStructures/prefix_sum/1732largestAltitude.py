@@ -11,4 +11,4 @@ class Solution:
         return top
 
 
-print(Solution().largestAltitude([-4,-3,-2,-1,4,3,2]))
+print(Solution().largestAltitude([-4, -3, -2, -1, 4, 3, 2]))

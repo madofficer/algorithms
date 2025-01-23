@@ -17,4 +17,3 @@ for x in queries:
         else:
             r = mid - 1
     print(ans)
-

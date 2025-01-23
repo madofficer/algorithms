@@ -16,6 +16,6 @@ for x in queries:
         else:
             r = mid - 1
     if arr[ans] == x:
-        print('YES')
+        print("YES")
     else:
-        print('NO')
+        print("NO")

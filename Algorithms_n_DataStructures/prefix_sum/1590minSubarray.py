@@ -27,6 +27,4 @@ class Solution:
         return min_length if min_length < l else -1
 
 
-print(Solution().minSubarray([3, 1, 4, 2]
-
-                             , 6))
+print(Solution().minSubarray([3, 1, 4, 2], 6))

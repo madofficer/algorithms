@@ -5,7 +5,7 @@ class Solution:
     def numberOfPoints(self, nums: List[List[int]]) -> int:
         points = set()
         for i in nums:
-            points |= (set(range(i[0], i[1] + 1)))
+            points |= set(range(i[0], i[1] + 1))
         return len(points)
 
 

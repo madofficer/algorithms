@@ -5,7 +5,7 @@ from typing import List
 class Solution:
     def shortestSubarray(self, nums: List[int], k: int) -> int:
         l = len(nums)
-        min_length = float('inf')
+        min_length = float("inf")
         min_sum = 0
         q = deque()
         prefix_sum = 0
@@ -26,7 +26,7 @@ class Solution:
             q.append((i, prefix_sum))
             min_sum = min(min_sum, prefix_sum)
 
-        if min_length == float('inf'):
+        if min_length == float("inf"):
             return -1
 
         return min_length

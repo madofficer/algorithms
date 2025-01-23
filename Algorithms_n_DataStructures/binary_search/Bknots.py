@@ -4,7 +4,7 @@ ropes = sorted([int(input()) for _ in range(n)])
 
 l = 0
 
-r = 10 ** 12
+r = 10**12
 
 for i in range(1000):
     mid = (l + r) / 2

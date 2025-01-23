@@ -13,5 +13,4 @@ class Solution:
             return 1
 
 
-
 print(Solution().minStartValue([1, -2, -3]))
