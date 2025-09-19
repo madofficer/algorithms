@@ -11,7 +11,7 @@ class ZigzagIterator:
         self.flag = 0
 
     def __iter__(self):
-        pass
+        return self
 
     def __next__(self):
         if self.a_i < len(self.a) and self.b_j < len(self.b):
@@ -30,16 +30,22 @@ class ZigzagIterator:
             self.a_i += 1
             return self.a[self.a_i - 1]
         else:
-            raise StopIteration
+            raise StopIteration()
 
 
 if __name__ == "__main__":
-    obj = ZigzagIterator([1], [])
+    obj = ZigzagIterator([1, 2, 3], [4, 5, 6])
     ans = []
+    for i in obj:
+        print(i)
     while True:
         try:
             ans.append(obj.__next__())
         except StopIteration:
             break
     print(ans)
+    print(type(obj))
+    for i in obj:
+        print(i)
+
 
