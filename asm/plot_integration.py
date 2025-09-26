@@ -1,23 +1,21 @@
 import matplotlib.pyplot as plt
 
-# Функция для извлечения шага dh и результата интеграла из файла
 def extract_step_and_result(filename):
     dh = None
     result = None
     with open(filename, 'r', encoding='utf-8') as file:
         lines = file.readlines()
         for line in lines:
-            if line.startswith("Шаг интегрирования:"):
+            if line.startswith("Integrate step:"):
                 dh = float(line.split(":")[1].strip())
-            elif line.startswith("Итоговый интеграл:"):
+            elif line.startswith("Output Integral:"):
                 result = float(line.split(":")[1].strip())
     if dh is None or result is None:
-        raise ValueError(f"Не удалось извлечь данные из файла: {filename}")
+        raise ValueError(f"cant load data: {filename}")
     return dh, result
 
-# Файлы с результатами
 global_path = r'D:\Users\Boris\CLionProjects\ASM2\cmake-build-debug'
-files = [r'\accem2.2.txt', r'\accem2.2_small.txt', r'\accem2.2_smal.txt']
+files = [r'\data1.txt', r'\data2.txt', r'\data3.txt']
 files = [global_path + name for name in files]
 
 
@@ -32,9 +30,9 @@ for file in files:
 
 
 plt.plot(steps, results, marker='o', label='Интеграл')
-plt.xlabel('Шаг dh')
-plt.ylabel('Значение интеграла')
-plt.title('Зависимость значения интеграла от шага')
+plt.xlabel('Step dh')
+plt.ylabel('Integral val')
+plt.title('Step Vs Val')
 plt.xscale('log')  
 plt.grid(True)
 plt.legend()

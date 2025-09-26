@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 class Tepl:
     def __init__(self, a, x1, x2, t):
         """
@@ -21,9 +22,9 @@ class Tepl:
 
     def set_initial_condition(self, B, Nx):
         """Инициализирует сетку и задает начальное условие U(x,0) = Bx²"""
-        self.x = np.linspace(self.x1, self.x2, Nx)  #  сетка
+        self.x = np.linspace(self.x1, self.x2, Nx)  # сетка
         self.dx = (self.x2 - self.x1) / (Nx - 1)
-        self.U = B * self.x**2  
+        self.U = B * self.x ** 3
 
         self.U[0] = 0  # Граничное условие при x=0
 
@@ -34,17 +35,17 @@ class Tepl:
         self.dt = self.t / Nt
 
         # Проверка устойчивости
-        CFL = self.a**2 * self.dt / self.dx**2
+        CFL = self.a ** 2 * self.dt / self.dx ** 2
         if CFL > 0.5:
             print(f"Схема неустойчива! CFL = {CFL:.2f} > 0.5")
             return
-        
+
         # Временные шаги
         for _ in range(Nt):
             U_new = self.U.copy()
             for i in range(1, len(self.x) - 1):
-                U_new[i] = self.U[i] + (self.a**2 * self.dt / self.dx**2) * (
-                    self.U[i+1] - 2*self.U[i] + self.U[i-1]
+                U_new[i] = self.U[i] + (self.a ** 2 * self.dt / self.dx ** 2) * (
+                        self.U[i + 1] - 2 * self.U[i] + self.U[i - 1]
                 )
             self.U = U_new
 
@@ -52,7 +53,7 @@ class Tepl:
         """Визуализация решения"""
         plt.figure(figsize=(10, 6))
         plt.plot(self.x, self.U, 'r-', linewidth=2, label=f'Решение при t = {self.t}')
-        plt.plot(self.x, B*self.x**2, 'k--', label='Начальное условие (t=0)')
+        plt.plot(self.x, B * self.x ** 3, 'k-*', label='Начальное условие (t=0)')
         plt.xlabel('x', fontsize=12)
         plt.ylabel('U(x, t)', fontsize=12)
         plt.title('Распределение температуры', fontsize=14)

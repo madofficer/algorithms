@@ -1,4 +1,4 @@
-from scripts.process_manager import ProcessManager,start
+from process_manager import ProcessManager,start
 
 if __name__ == "__main__":
     manager = ProcessManager()

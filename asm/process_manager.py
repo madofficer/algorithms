@@ -12,7 +12,6 @@ class ProcessManager:
         if pid == 0:
             os.nice(priority)
             try:
-                # Запуск приложения с аргументами
                 os.execvp(command_args[0], command_args)
             except FileNotFoundError:
                 print(f"Ошибка: Приложение '{command_args[0]}' не найдено")
